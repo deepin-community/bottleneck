@@ -1,0 +1,20 @@
+From: Gordon Ball <gordon@chronitis.net>
+Date: Fri, 15 Oct 2021 10:27:49 +0200
+Subject: doc: patch out unpackaged contributors sphinx ext
+
+---
+ doc/source/conf.py | 1 -
+ 1 file changed, 1 deletion(-)
+
+diff --git a/doc/source/conf.py b/doc/source/conf.py
+index 7efdfd8..29d11ea 100644
+--- a/doc/source/conf.py
++++ b/doc/source/conf.py
+@@ -32,7 +32,6 @@ extensions = [
+     "sphinx.ext.extlinks",
+     "sphinx.ext.intersphinx",
+     "numpydoc",
+-    "contributors",
+ ]
+ 
+ # Add any paths that contain templates here, relative to this directory.

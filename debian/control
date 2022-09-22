@@ -1,0 +1,52 @@
+Source: bottleneck
+Maintainer: Debian Python Team <team+python@tracker.debian.org>
+Uploaders: Ghislain Antony Vaillant <ghisvail@gmail.com>,
+           Pietro Battiston <me@pietrobattiston.it>
+Section: python
+Priority: optional
+Build-Depends: debhelper-compat (= 13),
+               dh-python,
+               python3-all-dev,
+               python3-numpy,
+               python3-pytest <!nocheck>,
+               python3-setuptools,
+Build-Depends-Indep: dh-sequence-sphinxdoc,
+                     python3-numpydoc,
+                     python3-sphinx,
+Standards-Version: 4.6.0
+Vcs-Browser: https://salsa.debian.org/python-team/packages/bottleneck
+Vcs-Git: https://salsa.debian.org/python-team/packages/bottleneck.git
+Homepage: https://github.com/pydata/bottleneck
+Rules-Requires-Root: no
+
+Package: python3-bottleneck
+Architecture: any
+Depends: ${misc:Depends},
+         ${python3:Depends},
+         ${shlibs:Depends}
+Suggests: python-bottleneck-doc
+Enhances: python3-pandas
+Description: Fast NumPy array functions written in C (Python 3)
+ Bottleneck is a collection of fast NumPy array functions written in C.
+ .
+ Only arrays with data type (dtype) int32, int64, float32, and float64 are
+ accelerated. All other dtypes result in calls to slower, unaccelerated
+ functions.
+ .
+ This package provides the modules for Python 3.
+
+Package: python-bottleneck-doc
+Architecture: all
+Section: doc
+Depends: ${misc:Depends},
+         ${sphinxdoc:Depends}
+Built-Using: ${sphinxdoc:Built-Using}
+Description: documentation for bottleneck
+ Bottleneck is a collection of fast NumPy array functions written in C.
+ .
+ Only arrays with data type (dtype) int32, int64, float32, and float64 are
+ accelerated. All other dtypes result in calls to slower, unaccelerated
+ functions.
+ .
+ This package provides the documentation for bottleneck.
+Multi-Arch: foreign

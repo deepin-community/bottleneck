@@ -1,0 +1,26 @@
+From: Gordon Ball <gordon@chronitis.net>
+Date: Fri, 15 Oct 2021 08:56:36 +0000
+Subject: doc: drop google analytics from template
+
+---
+ doc/source/_templates/layout.html | 9 ---------
+ 1 file changed, 9 deletions(-)
+
+diff --git a/doc/source/_templates/layout.html b/doc/source/_templates/layout.html
+index 2b049ef..41ca55d 100644
+--- a/doc/source/_templates/layout.html
++++ b/doc/source/_templates/layout.html
+@@ -1,13 +1,4 @@
+ {% extends "!layout.html" %}
+ 
+ {%- block extrahead %} 
+-    <!-- Global site tag (gtag.js) - Google Analytics -->
+-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-151945921-1"></script>
+-    <script>
+-      window.dataLayer = window.dataLayer || [];
+-      function gtag(){dataLayer.push(arguments);}
+-      gtag('js', new Date());
+-
+-      gtag('config', 'UA-151945921-1');
+-    </script>
+ {% endblock %}

@@ -1,0 +1,175 @@
+bottleneck (1.3.2+ds1-2) unstable; urgency=medium
+
+  * Team upload.
+  * Fix test errors during arch-independent build
+
+ -- Gordon Ball <gordon@chronitis.net>  Fri, 15 Oct 2021 20:03:20 +0000
+
+bottleneck (1.3.2+ds1-1) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Debian Janitor ]
+  * Bump debhelper from old 10 to 12.
+  * Set upstream metadata fields: Bug-Database, Bug-Submit.
+  * Remove unnecessary get-orig-source-target.
+
+  [ Ondřej Nový ]
+  * d/control: Update Maintainer field with new Debian Python Team
+    contact address.
+  * d/control: Update Vcs-* fields with new Debian Python Team Salsa
+    layout.
+
+  [ Debian Janitor ]
+  * Apply multi-arch hints.
+    + python3-bottleneck-dbg: Add Multi-Arch: same.
+    + python-bottleneck-doc: Add Multi-Arch: foreign.
+  * Bump debhelper from old 12 to 13.
+  * Remove constraints unnecessary since buster:
+    + Build-Depends: Drop versioned constraint on dpkg-dev and python3-numpy.
+
+  [ Gordon Ball ]
+  * Apply patch from Helmut Grohne to replace nodoc build profile with a
+    proper arch/indep split (Closes: #982962)
+  * Drop explicit debug symbols package (Closes: #994297)
+  * Update homepage to https://github.com/pydata/bottleneck
+  * New upstream version 1.3.2+ds1
+  * Rebase (and drop) patches
+  * Update test dependency nose -> pytest
+  * Standards-Version: 4.6.0
+  * Rules-Requires-Root: no
+  * Patch documentation to drop unpackaged contributors sphinx extension,
+    google analytics in html pages
+
+ -- Gordon Ball <gordon@chronitis.net>  Fri, 15 Oct 2021 18:10:18 +0000
+
+bottleneck (1.2.1+ds1-2) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Dmitry Shachnev ]
+  * debian/copyright: Use proper copyright sign (U+00A9, not U+24D2).
+
+  [ Ondřej Nový ]
+  * Use debhelper-compat instead of debian/compat.
+
+  [ Andrey Rahmatullin ]
+  * Drop Python 2 support.
+
+ -- Andrey Rahmatullin <wrar@debian.org>  Sun, 25 Aug 2019 11:44:51 +0500
+
+bottleneck (1.2.1+ds1-1) unstable; urgency=medium
+
+  * Team upload
+
+  [ Ghislain Antony Vaillant ]
+  * Update the gbp configuration
+  * Filter the vendored copy of numpydoc (Closes: 896619)
+  * Repack the upstream tarball
+  * New upstream version 1.2.1+ds1
+  * Drop the patch queue, applied upstream
+  * Update copyright information
+  * Run cme fix on control file
+    - Overall reordering of fields
+    - Drop superfluous versioning:
+      - python-all-dev
+      - python-setuptools
+    - Wrap and sort dependencies
+    - Use a secure Vcs-Git URI
+  * Run cme fix on copyright file
+    - Use a secure Format URI
+  * Fix build of documentation
+    - Build with Python 3
+    - Clean the build artefacts
+    - Add new dependency on numpydoc
+    - Fix the extra license file override
+    - New patch Enable-build-of-docs-with-Python-3.patch
+  * Add missing Built-Using metadata
+  * Add support for the nocheck build profile
+  * Add support for the nodoc build profile
+  * Add doc package to Suggests
+  * Fixup install of upstream change log
+  * Add missing hardening build option
+  * Add missing DH_VERBOSE preamble
+  * Normalize the package descriptions
+  * Provide debug extension packages
+  * Test the debug extension packages
+  * Add recommended get-orig-source target
+  * Bump the debhelper version to 10
+  * Bump the standards version to 4.1.1
+  * Add myself to the debianization copyright
+  * Relicense debianization to upstream terms (Closes: 880679)
+  * Transfer maintenance to the DPMT (Closes: 880678)
+
+  [ Ondřej Nový ]
+  * d/control: Set Vcs-* to salsa.debian.org
+  * d/control: Deprecating priority extra as per policy 4.0.1
+
+  [ Dmitry Shachnev ]
+  * Add licensing information for move_median.c and move_template.c.
+  * Use debhelper sequence for calling dh_numpy and dh_numpy3.
+
+ -- Dmitry Shachnev <mitya57@debian.org>  Sun, 01 Jul 2018 19:03:32 +0300
+
+bottleneck (1.2.0-6) unstable; urgency=medium
+
+  * Cherry-pick upstream fix for segfaults happening while running the tests.
+    New patch 0003-Fix-segfault-caused-by-bad-refcount.patch (Closes: #856141)
+  * Run autopkgtests for all supported Python versions
+
+ -- Ghislain Antony Vaillant <ghisvail@gmail.com>  Sun, 26 Feb 2017 13:58:26 +0000
+
+bottleneck (1.2.0-5) unstable; urgency=medium
+
+  [ Ghislain Antony Vaillant ]
+  * Cherry-pick upstream fix for Numpy 1.12
+    - New patch 0002-Fix-issue-with-relaxed-strides.patch
+
+  [ Pietro Battiston ]
+  * Added Ghislain Antony Vaillant as Uploader
+
+ -- Pietro Battiston <me@pietrobattiston.it>  Tue, 31 Jan 2017 13:49:00 +0100
+
+bottleneck (1.2.0-4) unstable; urgency=medium
+
+  [ Ghislain Antony Vaillant ]
+  * Fix normalization of version number (closes: #851520)
+
+ -- Pietro Battiston <me@pietrobattiston.it>  Wed, 25 Jan 2017 13:24:12 +0100
+
+bottleneck (1.2.0-3) unstable; urgency=medium
+
+  [ Ghislain Antony Vaillant ]
+  * Drop bypass of tests (closes: #851613)
+  * Add allow-stderr restriction to autopkgtests
+
+ -- Pietro Battiston <me@pietrobattiston.it>  Sun, 22 Jan 2017 10:13:44 +0100
+
+bottleneck (1.2.0-2) unstable; urgency=low
+
+  [ Ghislain Antony Vaillant ]
+  * Enable tests during build
+  * Add autopkgtest test suite
+  * Bypass test failures temporarily to work around #851613
+  * Clean build artefacts
+  * Fix dh_python{2,3} / dh_numpy{,3} calls
+
+  [ Pietro Battiston ]
+  * Normalize version to valid format (closes: #851520)
+
+ -- Pietro Battiston <me@pietrobattiston.it>  Wed, 18 Jan 2017 09:31:39 +0100
+
+bottleneck (1.2.0-1) unstable; urgency=low
+
+  * Imported Upstream version 1.2.0
+    - Removed cython, no more used, from Build-Depends
+    - Removed obsolete get-orig-source
+  * debian/control: fixed "Vcs-Git" field
+
+ -- Pietro Battiston <me@pietrobattiston.it>  Sun, 30 Oct 2016 01:50:21 +0200
+
+bottleneck (1.0.0+162-g058502e-1) unstable; urgency=low
+
+  * First release (closes: #706089)
+
+ -- Pietro Battiston <me@pietrobattiston.it>  Tue, 24 May 2016 09:20:31 +0200

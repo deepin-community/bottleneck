@@ -1,0 +1,10 @@
+Document: python-bottleneck-doc
+Title: Bottleneck Documentation
+Author: Keith Goodman
+Section: Programming/Python
+Abstract: Bottleneck is a collection of fast NumPy array functions written in
+ Cython.
+
+Format: html
+Index: /usr/share/doc/python-bottleneck-doc/html/index.html
+Files: /usr/share/doc/python-bottleneck-doc/html/*.html
