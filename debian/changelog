@@ -1,3 +1,21 @@
+bottleneck (1.3.8+ds1-1) unstable; urgency=medium
+
+  * New upstream version 1.3.8 (Closes: #1070360).
+  * Drop patch applied upstream.
+  * Update d/copyright.
+  * Enable Salsa CI.
+
+ -- Rebecca N. Palmer <rebecca_palmer@zoho.com>  Wed, 15 May 2024 19:50:47 +0100
+
+bottleneck (1.3.5+ds1-3) unstable; urgency=medium
+
+  * Team Upload.
+  * Use sphinx-build command instead of build_sphinx
+    directive with setup.py (Closes: #1042641)
+  * Add patch for extlinks to fix FTBFS with sphinx7.1
+
+ -- Nilesh Patra <nilesh@debian.org>  Fri, 10 Nov 2023 00:40:14 +0530
+
 bottleneck (1.3.5+ds1-2) unstable; urgency=medium
 
   * Team Upload.
