@@ -5,7 +5,9 @@ Source: https://github.com/pydata/bottleneck
 Files-Excluded: doc/sphinxext/*
 
 Files: *
-Copyright: © 2010-2017 Keith Goodman <bottle-neck@googlegroups.com>
+Copyright: © 2010-2019 Keith Goodman <bottle-neck@googlegroups.com>
+           © 2019-2024 Bottleneck Developers
+Comment: the upstream notice says "2019 Bottleneck Developers" but upstream development is ongoing
 License: BSD-2-clause
 
 Files: bottleneck/src/move_median/move_median.c
@@ -21,6 +23,7 @@ License: BSD-2-clause
 Files: debian/*
 Copyright: © 2016 Pietro Battiston <me@pietrobattiston.it>
  © 2017 Ghislain Antony Vaillant <ghisvail@gmail.com>
+ © 2018-2024 Debian Python Team
 License: BSD-2-clause
 
 License: BSD-2-clause

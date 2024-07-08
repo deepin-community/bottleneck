@@ -21,10 +21,9 @@ override_dh_auto_build-indep: export http_proxy=127.0.0.1:9
 override_dh_auto_build-indep: export https_proxy=127.0.0.1:9
 override_dh_auto_build-indep:
 	python3 setup.py build_ext --inplace
-	PYTHONPATH=. python3 setup.py build_sphinx
+	PYTHONPATH=. sphinx-build -N -bhtml doc/source/ build/sphinx/html
 
 override_dh_auto_test-indep:
 
 override_dh_installchangelogs:
 	dh_installchangelogs RELEASE.rst
-
