@@ -6,12 +6,42 @@ Release Notes
 These are the major changes made in each release. For details of the changes
 see the commit log at https://github.com/pydata/bottleneck
 
+Bottleneck 1.4.2
+================
+
+*Release date: 2024-10-18
+
+Maintenance
+~~~~~~~~~~~
+- Add `python_requires` to `setup.py` to limit build to 3.9+
+- Update the classifiers
+
+Bottleneck 1.4.1
+================
+
+*Release date: 2024-10-12
+
+Maintenance
+~~~~~~~~~~~~
+- Deprecate Python 3.7 and 3.8 
+- Add python 3.13 build
+
+Bottleneck 1.4.0
+================
+
+*Release date: 2024-06-17
+
+Maintenance
+~~~~~~~~~~~~
+- Building against numpy 2.0, which ships new backwards compatible ABI
+- Update CI config
+
 Bottleneck 1.3.8
 ================
 
 *Release date: 2024-02-04*
 
-Enhancements
+Maintenance
 ~~~~~~~~~~~~
 - Python 3.12 wheel available
 - Update CI config
@@ -21,7 +51,7 @@ Bottleneck 1.3.7
 
 *Release date: 2023-01-20*
 
-Enhancements
+Maintenance
 ~~~~~~~~~~~~
 - Python 3.11 wheel available
 
@@ -35,7 +65,7 @@ Bug Fixes
 ~~~~~~~~~
 - Fix ValueError: cannot convert float NaN to integer with new numpy version
 
-Enhancements
+Maintenance
 ~~~~~~~~~~~~
 - Python 3.11 available in CI tests
 

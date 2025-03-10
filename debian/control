@@ -5,15 +5,16 @@ Uploaders: Ghislain Antony Vaillant <ghisvail@gmail.com>,
 Section: python
 Priority: optional
 Build-Depends: debhelper-compat (= 13),
+               dh-sequence-numpy3,
                dh-sequence-python3,
                python3-all-dev,
-               dh-sequence-numpy3,
+	       python3-numpy,
                python3-pytest <!nocheck>,
                python3-setuptools,
 Build-Depends-Indep: dh-sequence-sphinxdoc,
                      python3-numpydoc,
                      python3-sphinx,
-Standards-Version: 4.6.2
+Standards-Version: 4.7.0
 Vcs-Browser: https://salsa.debian.org/python-team/packages/bottleneck
 Vcs-Git: https://salsa.debian.org/python-team/packages/bottleneck.git
 Homepage: https://github.com/pydata/bottleneck
