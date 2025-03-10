@@ -1,3 +1,18 @@
+bottleneck (1.4.2+ds1-2) unstable; urgency=medium
+
+  * Team upload.
+  * Add explicit dependency on python3-numpy
+
+ -- Timo Röhling <roehling@debian.org>  Mon, 27 Jan 2025 15:03:40 +0100
+
+bottleneck (1.4.2+ds1-1) unstable; urgency=medium
+
+  * Team Upload
+  * Fix watch file for new PyPi archive naming convention
+  * New upstream version 1.4.2+ds1
+
+ -- Alexandre Detiste <tchet@debian.org>  Mon, 06 Jan 2025 20:54:00 +0100
+
 bottleneck (1.3.8+ds1-1) unstable; urgency=medium
 
   * New upstream version 1.3.8 (Closes: #1070360).
